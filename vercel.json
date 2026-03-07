@@ -30,5 +30,16 @@
       "src": "/(.*)",
       "dest": "/api/index.php"
     }
-  ]
+  ],
+  "env": {
+    "APP_ENV": "production",
+    "APP_DEBUG": "false",
+    "LOG_CHANNEL": "stderr",
+    "SESSION_DRIVER": "cookie",
+    "CACHE_STORE": "array",
+    "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
+    "SESSION_FILES": "/tmp/storage/framework/sessions",
+    "CACHE_PATH": "/tmp/storage/framework/cache",
+    "LOG_PATH": "/tmp/storage/logs"
+  }
 }
