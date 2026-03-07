@@ -26,4 +26,7 @@ export default defineConfig({
     !isVercel && wayfinder({ formVariants: true }),
   ].filter(Boolean),
   esbuild: { jsx: 'automatic' },
+  build: {
+    outDir: 'public/build', // <--- explicitly set output directory
+  },
 });
