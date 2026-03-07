@@ -2,7 +2,7 @@
   "version": 2,
   "functions": {
     "api/index.php": {
-      "runtime": "now-php@1.0.0"
+      "runtime": "vercel-php@0.7.1"
     }
   },
   "routes": [
@@ -34,11 +34,9 @@
   "env": {
     "APP_ENV": "production",
     "APP_DEBUG": "false",
-    "APP_KEY": "base64:YOUR_KEY_HERE",
     "LOG_CHANNEL": "stderr",
     "SESSION_DRIVER": "cookie",
     "CACHE_STORE": "array",
-    "DB_CONNECTION": "mysql",
     "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
     "SESSION_FILES": "/tmp/storage/framework/sessions",
     "CACHE_PATH": "/tmp/storage/framework/cache",
