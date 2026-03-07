@@ -1,7 +1,6 @@
 <?php
 
-// Vercel only has a writable /tmp directory.
-// We need to ensure the framework storage directories exist there.
+// 1️⃣ Make storage writable on Vercel
 if (isset($_ENV['VERCEL'])) {
     $storagePath = '/tmp/storage/framework';
     $directories = [
@@ -15,4 +14,12 @@ if (isset($_ENV['VERCEL'])) {
             mkdir($directory, 0755, true);
         }
     }
+
+    // Update Laravel storage paths
+    $_ENV['VIEW_COMPILED_PATH'] = $storagePath . '/views';
+    $_ENV['SESSION_FILES'] = $storagePath . '/sessions';
+    $_ENV['CACHE_PATH'] = $storagePath . '/cache';
 }
+
+// 2️⃣ Load Laravel
+require __DIR__ . '/../public/index.php';
