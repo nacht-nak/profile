@@ -1,37 +1,32 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "public/build" }
+    },
+    {
+      "src": "api/index.php",
+      "use": "@vercel/php"
+    }
+  ],
   "functions": {
     "api/index.php": {
-      "runtime": "vercel-php@0.7.1"
+      "runtime": "vercel-php@0.7.1",
+      "maxDuration": 10
     }
   },
   "routes": [
-    {
-      "src": "/build/(.*)",
-      "dest": "/public/build/$1"
-    },
-    {
-      "src": "/(css|js|images|fonts)/(.*)",
-      "dest": "/public/$1/$2"
-    },
-    {
-      "src": "/favicon.ico",
-      "dest": "/public/favicon.ico"
-    },
-    {
-      "src": "/favicon.svg",
-      "dest": "/public/favicon.svg"
-    },
-    {
-      "src": "/robots.txt",
-      "dest": "/public/robots.txt"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/api/index.php"
-    }
+    { "src": "/build/(.*)", "dest": "/public/build/$1" },
+    { "src": "/(css|js|images|fonts)/(.*)", "dest": "/public/$1/$2" },
+    { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
+    { "src": "/favicon.svg", "dest": "/public/favicon.svg" },
+    { "src": "/robots.txt", "dest": "/public/robots.txt" },
+    { "src": "/(.*)", "dest": "/api/index.php" }
   ],
   "env": {
+    "APP_KEY": "base64:YOUR_APP_KEY_HERE",
     "APP_ENV": "production",
     "APP_DEBUG": "false",
     "LOG_CHANNEL": "stderr",
@@ -40,6 +35,6 @@
     "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
     "SESSION_FILES": "/tmp/storage/framework/sessions",
     "CACHE_PATH": "/tmp/storage/framework/cache",
-    "LOG_PATH": "/tmp/storage/logs"
+    "LOG_PATH": "/tmp/storage/framework/logs"
   }
 }
