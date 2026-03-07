@@ -8,8 +8,7 @@
     },
     {
       "src": "api/index.php",
-      "use": "@vercel/php",
-      "maxDuration": 10
+      "use": "@vercel/php"
     }
   ],
   "routes": [
