@@ -1,0 +1,16 @@
+.env
+.git
+node_modules
+vendor
+tests
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+phpunit.xml
+.editorconfig
+.prettierrc
+.prettierignore
+eslint.config.js
+tsconfig.json
+package-lock.json
