@@ -8,15 +8,10 @@
     },
     {
       "src": "api/index.php",
-      "use": "@vercel/php"
-    }
-  ],
-  "functions": {
-    "api/index.php": {
-      "runtime": "vercel-php@0.7.1",
+      "use": "@vercel/php",
       "maxDuration": 10
     }
-  },
+  ],
   "routes": [
     { "src": "/build/(.*)", "dest": "/public/build/$1" },
     { "src": "/(css|js|images|fonts)/(.*)", "dest": "/public/$1/$2" },
