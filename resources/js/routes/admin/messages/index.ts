@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition, applyUrlDefaults } from './../../../wayfinder'
 /**
 * @see \App\Http\Controllers\Admin\MessageController::index
- * @see app/Http/Controllers/Admin/MessageController.php:13
+ * @see app/Http/Controllers/Admin/MessageController.php:17
  * @route '/admin/messages'
  */
 export const index = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -16,7 +16,7 @@ index.definition = {
 
 /**
 * @see \App\Http\Controllers\Admin\MessageController::index
- * @see app/Http/Controllers/Admin/MessageController.php:13
+ * @see app/Http/Controllers/Admin/MessageController.php:17
  * @route '/admin/messages'
  */
 index.url = (options?: RouteQueryOptions) => {
@@ -25,7 +25,7 @@ index.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\Admin\MessageController::index
- * @see app/Http/Controllers/Admin/MessageController.php:13
+ * @see app/Http/Controllers/Admin/MessageController.php:17
  * @route '/admin/messages'
  */
 index.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -34,7 +34,7 @@ index.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\Admin\MessageController::index
- * @see app/Http/Controllers/Admin/MessageController.php:13
+ * @see app/Http/Controllers/Admin/MessageController.php:17
  * @route '/admin/messages'
  */
 index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -44,7 +44,7 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \App\Http\Controllers\Admin\MessageController::index
- * @see app/Http/Controllers/Admin/MessageController.php:13
+ * @see app/Http/Controllers/Admin/MessageController.php:17
  * @route '/admin/messages'
  */
     const indexForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -54,7 +54,7 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \App\Http\Controllers\Admin\MessageController::index
- * @see app/Http/Controllers/Admin/MessageController.php:13
+ * @see app/Http/Controllers/Admin/MessageController.php:17
  * @route '/admin/messages'
  */
         indexForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -63,7 +63,7 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \App\Http\Controllers\Admin\MessageController::index
- * @see app/Http/Controllers/Admin/MessageController.php:13
+ * @see app/Http/Controllers/Admin/MessageController.php:17
  * @route '/admin/messages'
  */
         indexForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -79,7 +79,7 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     index.form = indexForm
 /**
 * @see \App\Http\Controllers\Admin\MessageController::destroy
- * @see app/Http/Controllers/Admin/MessageController.php:23
+ * @see app/Http/Controllers/Admin/MessageController.php:55
  * @route '/admin/messages/{message}'
  */
 export const destroy = (args: { message: string | number } | [message: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -94,7 +94,7 @@ destroy.definition = {
 
 /**
 * @see \App\Http\Controllers\Admin\MessageController::destroy
- * @see app/Http/Controllers/Admin/MessageController.php:23
+ * @see app/Http/Controllers/Admin/MessageController.php:55
  * @route '/admin/messages/{message}'
  */
 destroy.url = (args: { message: string | number } | [message: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -122,7 +122,7 @@ destroy.url = (args: { message: string | number } | [message: string | number ] 
 
 /**
 * @see \App\Http\Controllers\Admin\MessageController::destroy
- * @see app/Http/Controllers/Admin/MessageController.php:23
+ * @see app/Http/Controllers/Admin/MessageController.php:55
  * @route '/admin/messages/{message}'
  */
 destroy.delete = (args: { message: string | number } | [message: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -132,7 +132,7 @@ destroy.delete = (args: { message: string | number } | [message: string | number
 
     /**
 * @see \App\Http\Controllers\Admin\MessageController::destroy
- * @see app/Http/Controllers/Admin/MessageController.php:23
+ * @see app/Http/Controllers/Admin/MessageController.php:55
  * @route '/admin/messages/{message}'
  */
     const destroyForm = (args: { message: string | number } | [message: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -147,7 +147,7 @@ destroy.delete = (args: { message: string | number } | [message: string | number
 
             /**
 * @see \App\Http\Controllers\Admin\MessageController::destroy
- * @see app/Http/Controllers/Admin/MessageController.php:23
+ * @see app/Http/Controllers/Admin/MessageController.php:55
  * @route '/admin/messages/{message}'
  */
         destroyForm.delete = (args: { message: string | number } | [message: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -161,9 +161,84 @@ destroy.delete = (args: { message: string | number } | [message: string | number
         })
     
     destroy.form = destroyForm
+/**
+* @see \App\Http\Controllers\Admin\MessageController::reply
+ * @see app/Http/Controllers/Admin/MessageController.php:27
+ * @route '/admin/messages/{id}/reply'
+ */
+export const reply = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
+    url: reply.url(args, options),
+    method: 'post',
+})
+
+reply.definition = {
+    methods: ["post"],
+    url: '/admin/messages/{id}/reply',
+} satisfies RouteDefinition<["post"]>
+
+/**
+* @see \App\Http\Controllers\Admin\MessageController::reply
+ * @see app/Http/Controllers/Admin/MessageController.php:27
+ * @route '/admin/messages/{id}/reply'
+ */
+reply.url = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions) => {
+    if (typeof args === 'string' || typeof args === 'number') {
+        args = { id: args }
+    }
+
+    
+    if (Array.isArray(args)) {
+        args = {
+                    id: args[0],
+                }
+    }
+
+    args = applyUrlDefaults(args)
+
+    const parsedArgs = {
+                        id: args.id,
+                }
+
+    return reply.definition.url
+            .replace('{id}', parsedArgs.id.toString())
+            .replace(/\/+$/, '') + queryParams(options)
+}
+
+/**
+* @see \App\Http\Controllers\Admin\MessageController::reply
+ * @see app/Http/Controllers/Admin/MessageController.php:27
+ * @route '/admin/messages/{id}/reply'
+ */
+reply.post = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
+    url: reply.url(args, options),
+    method: 'post',
+})
+
+    /**
+* @see \App\Http\Controllers\Admin\MessageController::reply
+ * @see app/Http/Controllers/Admin/MessageController.php:27
+ * @route '/admin/messages/{id}/reply'
+ */
+    const replyForm = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
+        action: reply.url(args, options),
+        method: 'post',
+    })
+
+            /**
+* @see \App\Http\Controllers\Admin\MessageController::reply
+ * @see app/Http/Controllers/Admin/MessageController.php:27
+ * @route '/admin/messages/{id}/reply'
+ */
+        replyForm.post = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
+            action: reply.url(args, options),
+            method: 'post',
+        })
+    
+    reply.form = replyForm
 const messages = {
     index: Object.assign(index, index),
 destroy: Object.assign(destroy, destroy),
+reply: Object.assign(reply, reply),
 }
 
 export default messages

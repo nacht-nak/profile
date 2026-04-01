@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class About extends Model
 {
-    protected $fillable = ['content', 'image', 'resume_url'];
+    protected $fillable = ['content', 'image', 'resume_url', 'resume_file', 'resume_original_name'];
 }

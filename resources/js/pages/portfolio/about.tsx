@@ -1,5 +1,5 @@
 import PortfolioLayout from '@/layouts/portfolio-layout';
-import { ArrowDownCircle } from 'lucide-react';
+import { FileText } from 'lucide-react';
 
 export default function About({ about }: any) {
     return (
@@ -17,9 +17,14 @@ export default function About({ about }: any) {
                             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-line transition-colors duration-300">
                                 {about?.content || "Passionate software engineer dedicated to building high-quality web applications. I love solving complex problems and creating seamless user experiences."}
                             </p>
-                            {about?.resume_url && (
-                                <a href={about.resume_url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#ff7700] font-bold hover:underline">
-                                    Download My Resume <ArrowDownCircle size={18} />
+                            {about?.resume_download_url && (
+                                <a
+                                    href={about.resume_download_url}
+                                    download
+                                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#ff7700] text-white font-bold rounded-xl hover:bg-[#e56a00] transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                                >
+                                    <FileText size={18} />
+                                    Download My Resume
                                 </a>
                             )}
                         </div>

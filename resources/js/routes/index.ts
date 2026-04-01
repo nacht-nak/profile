@@ -212,7 +212,7 @@ register.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     register.form = registerForm
 /**
 * @see \App\Http\Controllers\PortfolioController::home
- * @see app/Http/Controllers/PortfolioController.php:9
+ * @see app/Http/Controllers/PortfolioController.php:10
  * @route '/'
  */
 export const home = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -227,7 +227,7 @@ home.definition = {
 
 /**
 * @see \App\Http\Controllers\PortfolioController::home
- * @see app/Http/Controllers/PortfolioController.php:9
+ * @see app/Http/Controllers/PortfolioController.php:10
  * @route '/'
  */
 home.url = (options?: RouteQueryOptions) => {
@@ -236,7 +236,7 @@ home.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\PortfolioController::home
- * @see app/Http/Controllers/PortfolioController.php:9
+ * @see app/Http/Controllers/PortfolioController.php:10
  * @route '/'
  */
 home.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -245,7 +245,7 @@ home.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\PortfolioController::home
- * @see app/Http/Controllers/PortfolioController.php:9
+ * @see app/Http/Controllers/PortfolioController.php:10
  * @route '/'
  */
 home.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -255,7 +255,7 @@ home.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \App\Http\Controllers\PortfolioController::home
- * @see app/Http/Controllers/PortfolioController.php:9
+ * @see app/Http/Controllers/PortfolioController.php:10
  * @route '/'
  */
     const homeForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -265,7 +265,7 @@ home.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \App\Http\Controllers\PortfolioController::home
- * @see app/Http/Controllers/PortfolioController.php:9
+ * @see app/Http/Controllers/PortfolioController.php:10
  * @route '/'
  */
         homeForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -274,7 +274,7 @@ home.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \App\Http\Controllers\PortfolioController::home
- * @see app/Http/Controllers/PortfolioController.php:9
+ * @see app/Http/Controllers/PortfolioController.php:10
  * @route '/'
  */
         homeForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -290,7 +290,7 @@ home.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     home.form = homeForm
 /**
 * @see \App\Http\Controllers\PortfolioController::about
- * @see app/Http/Controllers/PortfolioController.php:14
+ * @see app/Http/Controllers/PortfolioController.php:15
  * @route '/about'
  */
 export const about = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -305,7 +305,7 @@ about.definition = {
 
 /**
 * @see \App\Http\Controllers\PortfolioController::about
- * @see app/Http/Controllers/PortfolioController.php:14
+ * @see app/Http/Controllers/PortfolioController.php:15
  * @route '/about'
  */
 about.url = (options?: RouteQueryOptions) => {
@@ -314,7 +314,7 @@ about.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\PortfolioController::about
- * @see app/Http/Controllers/PortfolioController.php:14
+ * @see app/Http/Controllers/PortfolioController.php:15
  * @route '/about'
  */
 about.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -323,7 +323,7 @@ about.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\PortfolioController::about
- * @see app/Http/Controllers/PortfolioController.php:14
+ * @see app/Http/Controllers/PortfolioController.php:15
  * @route '/about'
  */
 about.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -333,7 +333,7 @@ about.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \App\Http\Controllers\PortfolioController::about
- * @see app/Http/Controllers/PortfolioController.php:14
+ * @see app/Http/Controllers/PortfolioController.php:15
  * @route '/about'
  */
     const aboutForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -343,7 +343,7 @@ about.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \App\Http\Controllers\PortfolioController::about
- * @see app/Http/Controllers/PortfolioController.php:14
+ * @see app/Http/Controllers/PortfolioController.php:15
  * @route '/about'
  */
         aboutForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -352,7 +352,7 @@ about.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \App\Http\Controllers\PortfolioController::about
- * @see app/Http/Controllers/PortfolioController.php:14
+ * @see app/Http/Controllers/PortfolioController.php:15
  * @route '/about'
  */
         aboutForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -368,7 +368,7 @@ about.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     about.form = aboutForm
 /**
 * @see \App\Http\Controllers\PortfolioController::skills
- * @see app/Http/Controllers/PortfolioController.php:21
+ * @see app/Http/Controllers/PortfolioController.php:29
  * @route '/skills'
  */
 export const skills = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -383,7 +383,7 @@ skills.definition = {
 
 /**
 * @see \App\Http\Controllers\PortfolioController::skills
- * @see app/Http/Controllers/PortfolioController.php:21
+ * @see app/Http/Controllers/PortfolioController.php:29
  * @route '/skills'
  */
 skills.url = (options?: RouteQueryOptions) => {
@@ -392,7 +392,7 @@ skills.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\PortfolioController::skills
- * @see app/Http/Controllers/PortfolioController.php:21
+ * @see app/Http/Controllers/PortfolioController.php:29
  * @route '/skills'
  */
 skills.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -401,7 +401,7 @@ skills.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\PortfolioController::skills
- * @see app/Http/Controllers/PortfolioController.php:21
+ * @see app/Http/Controllers/PortfolioController.php:29
  * @route '/skills'
  */
 skills.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -411,7 +411,7 @@ skills.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \App\Http\Controllers\PortfolioController::skills
- * @see app/Http/Controllers/PortfolioController.php:21
+ * @see app/Http/Controllers/PortfolioController.php:29
  * @route '/skills'
  */
     const skillsForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -421,7 +421,7 @@ skills.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \App\Http\Controllers\PortfolioController::skills
- * @see app/Http/Controllers/PortfolioController.php:21
+ * @see app/Http/Controllers/PortfolioController.php:29
  * @route '/skills'
  */
         skillsForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -430,7 +430,7 @@ skills.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \App\Http\Controllers\PortfolioController::skills
- * @see app/Http/Controllers/PortfolioController.php:21
+ * @see app/Http/Controllers/PortfolioController.php:29
  * @route '/skills'
  */
         skillsForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -446,7 +446,7 @@ skills.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     skills.form = skillsForm
 /**
 * @see \App\Http\Controllers\PortfolioController::certifications
- * @see app/Http/Controllers/PortfolioController.php:28
+ * @see app/Http/Controllers/PortfolioController.php:36
  * @route '/certifications'
  */
 export const certifications = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -461,7 +461,7 @@ certifications.definition = {
 
 /**
 * @see \App\Http\Controllers\PortfolioController::certifications
- * @see app/Http/Controllers/PortfolioController.php:28
+ * @see app/Http/Controllers/PortfolioController.php:36
  * @route '/certifications'
  */
 certifications.url = (options?: RouteQueryOptions) => {
@@ -470,7 +470,7 @@ certifications.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\PortfolioController::certifications
- * @see app/Http/Controllers/PortfolioController.php:28
+ * @see app/Http/Controllers/PortfolioController.php:36
  * @route '/certifications'
  */
 certifications.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -479,7 +479,7 @@ certifications.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\PortfolioController::certifications
- * @see app/Http/Controllers/PortfolioController.php:28
+ * @see app/Http/Controllers/PortfolioController.php:36
  * @route '/certifications'
  */
 certifications.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -489,7 +489,7 @@ certifications.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => 
 
     /**
 * @see \App\Http\Controllers\PortfolioController::certifications
- * @see app/Http/Controllers/PortfolioController.php:28
+ * @see app/Http/Controllers/PortfolioController.php:36
  * @route '/certifications'
  */
     const certificationsForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -499,7 +499,7 @@ certifications.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => 
 
             /**
 * @see \App\Http\Controllers\PortfolioController::certifications
- * @see app/Http/Controllers/PortfolioController.php:28
+ * @see app/Http/Controllers/PortfolioController.php:36
  * @route '/certifications'
  */
         certificationsForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -508,7 +508,7 @@ certifications.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => 
         })
             /**
 * @see \App\Http\Controllers\PortfolioController::certifications
- * @see app/Http/Controllers/PortfolioController.php:28
+ * @see app/Http/Controllers/PortfolioController.php:36
  * @route '/certifications'
  */
         certificationsForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -524,7 +524,7 @@ certifications.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => 
     certifications.form = certificationsForm
 /**
 * @see \App\Http\Controllers\PortfolioController::projects
- * @see app/Http/Controllers/PortfolioController.php:35
+ * @see app/Http/Controllers/PortfolioController.php:43
  * @route '/projects'
  */
 export const projects = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -539,7 +539,7 @@ projects.definition = {
 
 /**
 * @see \App\Http\Controllers\PortfolioController::projects
- * @see app/Http/Controllers/PortfolioController.php:35
+ * @see app/Http/Controllers/PortfolioController.php:43
  * @route '/projects'
  */
 projects.url = (options?: RouteQueryOptions) => {
@@ -548,7 +548,7 @@ projects.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\PortfolioController::projects
- * @see app/Http/Controllers/PortfolioController.php:35
+ * @see app/Http/Controllers/PortfolioController.php:43
  * @route '/projects'
  */
 projects.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -557,7 +557,7 @@ projects.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\PortfolioController::projects
- * @see app/Http/Controllers/PortfolioController.php:35
+ * @see app/Http/Controllers/PortfolioController.php:43
  * @route '/projects'
  */
 projects.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -567,7 +567,7 @@ projects.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \App\Http\Controllers\PortfolioController::projects
- * @see app/Http/Controllers/PortfolioController.php:35
+ * @see app/Http/Controllers/PortfolioController.php:43
  * @route '/projects'
  */
     const projectsForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -577,7 +577,7 @@ projects.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \App\Http\Controllers\PortfolioController::projects
- * @see app/Http/Controllers/PortfolioController.php:35
+ * @see app/Http/Controllers/PortfolioController.php:43
  * @route '/projects'
  */
         projectsForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -586,7 +586,7 @@ projects.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \App\Http\Controllers\PortfolioController::projects
- * @see app/Http/Controllers/PortfolioController.php:35
+ * @see app/Http/Controllers/PortfolioController.php:43
  * @route '/projects'
  */
         projectsForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -602,7 +602,7 @@ projects.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     projects.form = projectsForm
 /**
 * @see \App\Http\Controllers\PortfolioController::contact
- * @see app/Http/Controllers/PortfolioController.php:42
+ * @see app/Http/Controllers/PortfolioController.php:50
  * @route '/contact'
  */
 export const contact = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -617,7 +617,7 @@ contact.definition = {
 
 /**
 * @see \App\Http\Controllers\PortfolioController::contact
- * @see app/Http/Controllers/PortfolioController.php:42
+ * @see app/Http/Controllers/PortfolioController.php:50
  * @route '/contact'
  */
 contact.url = (options?: RouteQueryOptions) => {
@@ -626,7 +626,7 @@ contact.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\PortfolioController::contact
- * @see app/Http/Controllers/PortfolioController.php:42
+ * @see app/Http/Controllers/PortfolioController.php:50
  * @route '/contact'
  */
 contact.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -635,7 +635,7 @@ contact.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\PortfolioController::contact
- * @see app/Http/Controllers/PortfolioController.php:42
+ * @see app/Http/Controllers/PortfolioController.php:50
  * @route '/contact'
  */
 contact.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -645,7 +645,7 @@ contact.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \App\Http\Controllers\PortfolioController::contact
- * @see app/Http/Controllers/PortfolioController.php:42
+ * @see app/Http/Controllers/PortfolioController.php:50
  * @route '/contact'
  */
     const contactForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -655,7 +655,7 @@ contact.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \App\Http\Controllers\PortfolioController::contact
- * @see app/Http/Controllers/PortfolioController.php:42
+ * @see app/Http/Controllers/PortfolioController.php:50
  * @route '/contact'
  */
         contactForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -664,7 +664,7 @@ contact.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \App\Http\Controllers\PortfolioController::contact
- * @see app/Http/Controllers/PortfolioController.php:42
+ * @see app/Http/Controllers/PortfolioController.php:50
  * @route '/contact'
  */
         contactForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({

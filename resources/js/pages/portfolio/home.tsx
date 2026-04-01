@@ -1,6 +1,6 @@
 import PortfolioLayout from '@/layouts/portfolio-layout';
 import { motion } from 'framer-motion';
-import { ArrowDownCircle, Linkedin, Github, Twitter, Send, Instagram } from 'lucide-react';
+import { ArrowDownCircle, Linkedin, Github, Twitter, Send, Instagram, Facebook } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link } from '@inertiajs/react';
 
@@ -73,8 +73,7 @@ export default function Home() {
                     >
                         <a href="javascript:void(0)" className="w-[50px] h-[50px] bg-[#000000] dark:bg-white text-white dark:text-black rounded-full flex items-center justify-center hover:-translate-y-1 transition-all shadow-lg"><Linkedin size={22} strokeWidth={2.5} /></a>
                         <a href="javascript:void(0)" className="w-[50px] h-[50px] bg-[#000000] dark:bg-white text-white dark:text-black rounded-full flex items-center justify-center hover:-translate-y-1 transition-all shadow-lg"><Github size={22} strokeWidth={2.5} /></a>
-                        <a href="javascript:void(0)" className="w-[50px] h-[50px] bg-[#000000] dark:bg-white text-white dark:text-black rounded-full flex items-center justify-center hover:-translate-y-1 transition-all shadow-lg"><Twitter size={22} strokeWidth={2.5} /></a>
-                        <a href="javascript:void(0)" className="w-[50px] h-[50px] bg-[#000000] dark:bg-white text-white dark:text-black rounded-full flex items-center justify-center hover:-translate-y-1 transition-all shadow-lg"><Send size={20} strokeWidth={2.5} className="-ml-1" /></a>
+                        <a href="javascript:void(0)" className="w-[50px] h-[50px] bg-[#000000] dark:bg-white text-white dark:text-black rounded-full flex items-center justify-center hover:-translate-y-1 transition-all shadow-lg"><Facebook size={22} strokeWidth={2.5} /></a>
                         <a href="javascript:void(0)" className="w-[50px] h-[50px] bg-[#000000] dark:bg-white text-white dark:text-black rounded-full flex items-center justify-center hover:-translate-y-1 transition-all shadow-lg"><Instagram size={22} strokeWidth={2.5} /></a>
                         <a href="javascript:void(0)" className="w-[50px] h-[50px] bg-[#000000] dark:bg-white text-white dark:text-black rounded-full flex items-center justify-center hover:-translate-y-1 transition-all shadow-lg text-[12px] font-black"><span className="leading-[1] italic">DEV</span></a>
                     </motion.div>

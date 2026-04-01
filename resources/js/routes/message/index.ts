@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition } from './../../wayfinder'
 /**
 * @see \App\Http\Controllers\PortfolioController::send
- * @see app/Http/Controllers/PortfolioController.php:47
+ * @see app/Http/Controllers/PortfolioController.php:55
  * @route '/message'
  */
 export const send = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -16,7 +16,7 @@ send.definition = {
 
 /**
 * @see \App\Http\Controllers\PortfolioController::send
- * @see app/Http/Controllers/PortfolioController.php:47
+ * @see app/Http/Controllers/PortfolioController.php:55
  * @route '/message'
  */
 send.url = (options?: RouteQueryOptions) => {
@@ -25,7 +25,7 @@ send.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\PortfolioController::send
- * @see app/Http/Controllers/PortfolioController.php:47
+ * @see app/Http/Controllers/PortfolioController.php:55
  * @route '/message'
  */
 send.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -35,7 +35,7 @@ send.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 
     /**
 * @see \App\Http\Controllers\PortfolioController::send
- * @see app/Http/Controllers/PortfolioController.php:47
+ * @see app/Http/Controllers/PortfolioController.php:55
  * @route '/message'
  */
     const sendForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -45,7 +45,7 @@ send.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 
             /**
 * @see \App\Http\Controllers\PortfolioController::send
- * @see app/Http/Controllers/PortfolioController.php:47
+ * @see app/Http/Controllers/PortfolioController.php:55
  * @route '/message'
  */
         sendForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({

@@ -15,9 +15,10 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::resource('users', UserController::class)->except(['show']);
     Route::resource('projects', ProjectController::class);
     Route::resource('messages', MessageController::class)->only(['index', 'destroy']);
+    Route::post('/messages/{id}/reply', [MessageController::class, 'reply'])->name('messages.reply');
     Route::resource('skills', SkillController::class);
     Route::resource('certifications', CertificationController::class);
     Route::resource('experiences', ExperienceController::class);
     Route::get('/about', [AboutController::class , 'edit'])->name('about.edit');
-    Route::put('/about', [AboutController::class , 'update'])->name('about.update');
+    Route::post('/about', [AboutController::class , 'update'])->name('about.update');
 });

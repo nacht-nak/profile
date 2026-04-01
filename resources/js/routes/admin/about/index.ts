@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition } from './../../../wayfinder'
 /**
 * @see \App\Http\Controllers\Admin\AboutController::edit
- * @see app/Http/Controllers/Admin/AboutController.php:10
+ * @see app/Http/Controllers/Admin/AboutController.php:11
  * @route '/admin/about'
  */
 export const edit = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -16,7 +16,7 @@ edit.definition = {
 
 /**
 * @see \App\Http\Controllers\Admin\AboutController::edit
- * @see app/Http/Controllers/Admin/AboutController.php:10
+ * @see app/Http/Controllers/Admin/AboutController.php:11
  * @route '/admin/about'
  */
 edit.url = (options?: RouteQueryOptions) => {
@@ -25,7 +25,7 @@ edit.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\Admin\AboutController::edit
- * @see app/Http/Controllers/Admin/AboutController.php:10
+ * @see app/Http/Controllers/Admin/AboutController.php:11
  * @route '/admin/about'
  */
 edit.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -34,7 +34,7 @@ edit.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\Admin\AboutController::edit
- * @see app/Http/Controllers/Admin/AboutController.php:10
+ * @see app/Http/Controllers/Admin/AboutController.php:11
  * @route '/admin/about'
  */
 edit.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -44,7 +44,7 @@ edit.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \App\Http\Controllers\Admin\AboutController::edit
- * @see app/Http/Controllers/Admin/AboutController.php:10
+ * @see app/Http/Controllers/Admin/AboutController.php:11
  * @route '/admin/about'
  */
     const editForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -54,7 +54,7 @@ edit.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \App\Http\Controllers\Admin\AboutController::edit
- * @see app/Http/Controllers/Admin/AboutController.php:10
+ * @see app/Http/Controllers/Admin/AboutController.php:11
  * @route '/admin/about'
  */
         editForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -63,7 +63,7 @@ edit.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \App\Http\Controllers\Admin\AboutController::edit
- * @see app/Http/Controllers/Admin/AboutController.php:10
+ * @see app/Http/Controllers/Admin/AboutController.php:11
  * @route '/admin/about'
  */
         editForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -79,22 +79,22 @@ edit.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     edit.form = editForm
 /**
 * @see \App\Http\Controllers\Admin\AboutController::update
- * @see app/Http/Controllers/Admin/AboutController.php:17
+ * @see app/Http/Controllers/Admin/AboutController.php:24
  * @route '/admin/about'
  */
-export const update = (options?: RouteQueryOptions): RouteDefinition<'put'> => ({
+export const update = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: update.url(options),
-    method: 'put',
+    method: 'post',
 })
 
 update.definition = {
-    methods: ["put"],
+    methods: ["post"],
     url: '/admin/about',
-} satisfies RouteDefinition<["put"]>
+} satisfies RouteDefinition<["post"]>
 
 /**
 * @see \App\Http\Controllers\Admin\AboutController::update
- * @see app/Http/Controllers/Admin/AboutController.php:17
+ * @see app/Http/Controllers/Admin/AboutController.php:24
  * @route '/admin/about'
  */
 update.url = (options?: RouteQueryOptions) => {
@@ -103,41 +103,31 @@ update.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\Admin\AboutController::update
- * @see app/Http/Controllers/Admin/AboutController.php:17
+ * @see app/Http/Controllers/Admin/AboutController.php:24
  * @route '/admin/about'
  */
-update.put = (options?: RouteQueryOptions): RouteDefinition<'put'> => ({
+update.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: update.url(options),
-    method: 'put',
+    method: 'post',
 })
 
     /**
 * @see \App\Http\Controllers\Admin\AboutController::update
- * @see app/Http/Controllers/Admin/AboutController.php:17
+ * @see app/Http/Controllers/Admin/AboutController.php:24
  * @route '/admin/about'
  */
     const updateForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
-        action: update.url({
-                    [options?.mergeQuery ? 'mergeQuery' : 'query']: {
-                        _method: 'PUT',
-                        ...(options?.query ?? options?.mergeQuery ?? {}),
-                    }
-                }),
+        action: update.url(options),
         method: 'post',
     })
 
             /**
 * @see \App\Http\Controllers\Admin\AboutController::update
- * @see app/Http/Controllers/Admin/AboutController.php:17
+ * @see app/Http/Controllers/Admin/AboutController.php:24
  * @route '/admin/about'
  */
-        updateForm.put = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
-            action: update.url({
-                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
-                            _method: 'PUT',
-                            ...(options?.query ?? options?.mergeQuery ?? {}),
-                        }
-                    }),
+        updateForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
+            action: update.url(options),
             method: 'post',
         })
     

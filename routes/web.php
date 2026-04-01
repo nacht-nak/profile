@@ -10,6 +10,7 @@ Route::get('/certifications', [\App\Http\Controllers\PortfolioController::class 
 Route::get('/projects', [\App\Http\Controllers\PortfolioController::class , 'projects'])->name('projects');
 Route::get('/contact', [\App\Http\Controllers\PortfolioController::class , 'contact'])->name('contact');
 Route::post('/message', [\App\Http\Controllers\PortfolioController::class , 'sendMessage'])->name('message.send');
+Route::get('/resume/download', [\App\Http\Controllers\PortfolioController::class , 'downloadResume'])->name('resume.download');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', [DashboardController::class , 'index'])->name('dashboard');
