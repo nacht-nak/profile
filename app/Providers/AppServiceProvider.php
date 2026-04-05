@@ -33,9 +33,12 @@ class AppServiceProvider extends ServiceProvider
     {
         Date::use(CarbonImmutable::class);
 
-        DB::prohibitDestructiveCommands(
-            app()->isProduction(),
-        );
+        // Only prohibit destructive commands when not on Vercel serverless
+        if (!env('VERCEL')) {
+            DB::prohibitDestructiveCommands(
+                app()->isProduction(),
+            );
+        }
 
         Password::defaults(fn (): ?Password => app()->isProduction()
             ? Password::min(12)
