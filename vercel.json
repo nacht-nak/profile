@@ -16,17 +16,22 @@
   "routes": [
     { "src": "/build/(.*)", "dest": "/public/build/$1" },
     { "src": "/(css|js|images|fonts|storage)/(.*)", "dest": "/public/$1/$2" },
-    { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
-    { "src": "/favicon.svg", "dest": "/public/favicon.svg" },
-    { "src": "/robots.txt", "dest": "/public/robots.txt" },
+    { "src": "/favicon\\.ico", "dest": "/public/favicon.ico" },
+    { "src": "/favicon\\.svg", "dest": "/public/favicon.svg" },
+    { "src": "/robots\\.txt", "dest": "/public/robots.txt" },
+    { "src": "/(.*\\.(png|jpg|jpeg|gif|webp|svg|ico))$", "dest": "/public/$1" },
     { "src": "/(.*)", "dest": "/api/index.php" }
   ],
   "env": {
+    "VERCEL": "1",
     "APP_ENV": "production",
     "APP_DEBUG": "false",
+    "APP_KEY": "base64:h6o7BBSfwb9XwUGcVqKAVqMGQOAL3UA4Rgotd73lt1Y=",
+    "APP_URL": "https://nacht-nak-profile.vercel.app",
     "LOG_CHANNEL": "stderr",
     "SESSION_DRIVER": "cookie",
     "CACHE_STORE": "array",
-    "DB_CONNECTION": "mysql"
+    "QUEUE_CONNECTION": "sync",
+    "INERTIA_SSR_ENABLED": "false"
   }
 }
